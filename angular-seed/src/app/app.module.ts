@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { TodoService } from './services/todo.service';
 import { AppComponent } from './app.component';
 
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -33,7 +33,7 @@ const ROUTES = [
     RouterModule.forRoot(ROUTES),
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
